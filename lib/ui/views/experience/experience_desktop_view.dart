@@ -9,6 +9,7 @@ import '../../widgets/custom_scroller.dart';
 import '../../widgets/experience_widget.dart';
 import '../../widgets/trailing_widget.dart';
 import 'experience_view_model.dart';
+import 'package:intl/intl.dart';
 
 class ExperienceDesktopView extends HookWidget {
   final ScreenUiHelper? uiHelpers;
@@ -64,9 +65,11 @@ class ExperienceDesktopView extends HookWidget {
 
   Widget _buildExperience(
       BuildContext context, ScrollController _scrollController) {
+    DateFormat format = DateFormat.MMMM();
+
     return ExperienceTree(
       headTitle:
-          '${DateTimeUtils().monthsList[DateTime.now().month]} - ${DateTime.now().year}',
+          '${format.format(DateTime.now())} - ${DateTime.now().year}',
       tailTitle: 'May - 2020',
       experienceData: PersonalDetails.experienceList,
       scrollController: _scrollController,

@@ -1,4 +1,4 @@
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 
 import '../../app/icons.dart';
 import '../../core/models/project.dart';
@@ -24,7 +24,7 @@ class ProjectWidget extends StatelessWidget {
       delay: index * 0.2 + 1,
       child: TranslateOnHover(
         child: Container(
-          height: 279,
+          height: 300,
           margin: EdgeInsets.only(
               bottom: 15, right: uiHelpers.width! > 768 ? 15 : 0),
           child: Neumorphic(
@@ -39,7 +39,7 @@ class ProjectWidget extends StatelessWidget {
                     NeumorphicBoxShape.roundRect(BorderRadius.circular(12))),
             child: Container(
               width: uiHelpers.width,
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../core/utils/architecture_view.dart';
@@ -16,7 +16,7 @@ class HomeView extends StatelessWidget {
         builder: (context, uiHelpers, model) {
           return Scaffold(
             body: ScreenTypeLayout(
-                tablet: HomeDesktopView(model: model, uiHelpers: uiHelpers),
+                tablet: HomeMobileView(model: model, uiHelpers: uiHelpers),
                 mobile: HomeMobileView(model: model, uiHelpers: uiHelpers),
                 desktop: HomeDesktopView(model: model, uiHelpers: uiHelpers)),
           );

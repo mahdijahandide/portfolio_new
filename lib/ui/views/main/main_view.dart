@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:collapsible_sidebar/collapsible_sidebar.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../app/configs.dart';

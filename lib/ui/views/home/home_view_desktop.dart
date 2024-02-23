@@ -1,4 +1,4 @@
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 import '../../../app/configs.dart';
 import '../../../app/icons.dart';
 import '../../../core/utils/ScreenUiHelper.dart';
@@ -13,6 +13,7 @@ class HomeDesktopView extends StatelessWidget {
 
   const HomeDesktopView({Key? key, this.uiHelpers, this.model})
       : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,58 +82,71 @@ class HomeDesktopView extends StatelessWidget {
                 SizedBox(
                   height: uiHelpers!.width! * 0.05,
                 ),
+
+                // SizedBox(height: 90,
+                //   child: ListView(
+                //     itemExtent: 285,
+                //     physics: BouncingScrollPhysics(),
+                //     shrinkWrap: false,
+                //     scrollDirection: Axis.horizontal,
+                //     children: model!.skills.keys.map((e) => Container(
+                //       padding: const EdgeInsets.symmetric(vertical: 8),
+                //       margin: EdgeInsets.symmetric(horizontal: 12),
+                //       child: Neumorphic(
+                //         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                //         style: NeumorphicStyle(
+                //             shape: NeumorphicShape.concave,
+                //             boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(12)),
+                //             depth: 8,
+                //             intensity: 0.6,
+                //             color: uiHelpers!.surfaceColor),
+                //         child: Row(
+                //           mainAxisSize: MainAxisSize.min,
+                //           children: [
+                //             Neumorphic(
+                //                 style: NeumorphicStyle(
+                //                   depth: NeumorphicTheme.embossDepth(
+                //                       context),
+                //                   boxShape: const NeumorphicBoxShape
+                //                       .circle(),
+                //                 ),
+                //                 child: Image.asset(
+                //                   model!.skills[e]!,
+                //                   width: 40,
+                //                   height: 40,
+                //                 )),
+                //             const SizedBox(width: 10),
+                //             Text(
+                //               e,
+                //               style: uiHelpers!.title,
+                //             )
+                //           ],
+                //         ),
+                //       ),
+                //     ))
+                //         .toList(),
+                //   ),
+                // ),
+                // SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: model!.skills.keys
-                          .map((e) => Container(
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 8),
-                                width: uiHelpers!.width! * 0.28,
-                                child: Neumorphic(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 15, vertical: 10),
-                                  style: NeumorphicStyle(
-                                      shape: NeumorphicShape.concave,
-                                      boxShape: NeumorphicBoxShape.roundRect(
-                                          BorderRadius.circular(12)),
-                                      depth: 8,
-                                      intensity: 0.6,
-                                      color: uiHelpers!.surfaceColor),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Neumorphic(
-                                          style: NeumorphicStyle(
-                                            depth: NeumorphicTheme.embossDepth(
-                                                context),
-                                            boxShape: const NeumorphicBoxShape
-                                                .circle(),
-                                          ),
-                                          child: Image.asset(
-                                            model!.skills[e]!,
-                                            width: 40,
-                                            height: 40,
-                                          )),
-                                      const SizedBox(width: 10),
-                                      Text(
-                                        e,
-                                        style: uiHelpers!.title,
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ))
-                          .toList(),
+                    Container(
+                      height: 300,
+                      width: uiHelpers!.width! * 0.18,
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)
+                      ,image: DecorationImage(image: AssetImage("assets/images/mehdi.jpg"),
+                          fit: BoxFit.fill)
+                      ),
                     ),
+                    SizedBox(width: uiHelpers!.width! * 0.01),
+
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SizedBox(
-                          width: uiHelpers!.width! * 0.3,
+                          width: uiHelpers!.width! * 0.53,
                           child: Text(
                             PersonalDetails.shortIntro,
                             style: uiHelpers!.body!.copyWith(

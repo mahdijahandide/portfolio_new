@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
+import 'package:icons_plus/icons_plus.dart';
 
 import '../core/models/project.dart';
 import '../core/models/skill_display.dart';
@@ -9,14 +11,11 @@ import 'icons.dart';
 
 //*Social Media Links
 mixin SocialLinks {
-  static const String linkedinUrl =
-      'https://www.linkedin.com/in/mahdi-jahandide-8a04ba1a7/';
-  static const String mediumLink = 'https://medium.com/@mhdi.j77';
+  static const String linkedinUrl = 'https://www.linkedin.com/in/mahdi-jahandide-8a04ba1a7/';
   static const String twitterLink = 'https://twitter.com/mhdi____77';
   static const String githubLink = 'https://github.com/mahdijahandide';
   static const String facebookLink = 'https://www.facebook.com/mhdi.mhdi.3914207/';
-  static const String instagramLink =
-      'https://www.instagram.com/mehdijahandide98/';
+  static const String instagramLink = 'https://www.instagram.com/mehdijahandide98/';
   static const String telegramLink = 'https://t.me/Mhdi9877';
 }
 
@@ -50,57 +49,40 @@ mixin EducationDetails {
 mixin PersonalDetails {
   static const List<SkillDisplay> skillDisplayList = [
     SkillDisplay(
-        title: 'Mobile Application Developement',
-        color: Color(0xFFE2A599),
-        iconData: SkillDisplayIcons.appIcon),
+        title: 'Android Developer',
+        color: Colors.greenAccent,
+        iconData: FlutterIcons.android_ant),
     SkillDisplay(
-        title: 'Full Stack Web Developement',
-        color: Color(0xFF5E57BB),
-        iconData: SkillDisplayIcons.websiteIcon),
+        title: 'Ios Developer',
+        color: Colors.blueGrey,
+        iconData: FlutterIcons.apple1_ant),
     SkillDisplay(
-        title: 'Backend Developer',
-        color: Color(0xFFE45447),
-        iconData: SkillDisplayIcons.mlIcon),
+        title: 'Flutter Developer',
+        color: Colors.blueAccent,
+        iconData: BoxIcons.bxl_flutter),
     SkillDisplay(
-        title: 'Database Management',
-        color: Color(0xFFFFB300),
-        iconData: SkillDisplayIcons.databaseIcon)
+        title: 'Laravel Developer',
+        color: Colors.deepOrange,
+        iconData: FlutterIcons.laravel_faw5d)
   ];
   static const String resumeLink =
-      'https://drive.google.com/file/d/1By0i2bvfip93ycoT8Qjn0mzRPsH0eXq5/view?usp=sharing';
+      'https://cvbuilder.me/Resume/en/1ad0bf38-438a-4fef-9837-111704d44278?template=PreviewDefault';
   static const String whatsappLink = 'https://wa.me/09336864482';
   static const List<Technologies> techList = [
-    Technologies(icon: TechnologiesIcon.reactJsIcon, name: 'Flutter'),
+    Technologies(icon: FlutterIcons.google__ent, name: 'Flutter'),
     Technologies(icon: TechnologiesIcon.javaIcon, name: 'Java'),
-    Technologies(icon: TechnologiesIcon.pythonIcon, name: 'Kotlin'),
+    Technologies(icon: FlutterIcons.pac_man_mco, name: 'Kotlin'),
     Technologies(icon: TechnologiesIcon.pythonIcon, name: 'Swift'),
-    Technologies(icon: TechnologiesIcon.pythonIcon, name: 'Golang')
+    Technologies(icon: TechnologiesIcon.pythonIcon, name: 'Laravel')
   ];
   static const String githubUserName = 'mahdijahandide';
   static const String githubDataUrl =
       'https://api.github.com/users/$githubUserName/repos';
 
   static List<Project> projectsList = [
+
     Project(
         id: '0',
-        type: ['Website', 'Application'],
-        title: 'POS System',
-        githubLink: 'https://github.com/mahdijahandide',
-        websiteLink: 'https://possystem.gulfweb.ir',
-        description:
-            '(login: user:admin pass: kash5admin) Responsive shop pos system for all platforms (web, Android, iOS) with the ability to report in different formats,customer information, percentage and direct discounts, register and report work shifts, daily automatic calculations, cost calculation Sending the productaccording to the size and address, and...',
-        tools: ['Flutter', 'Laravel', 'SQL', 'PWA']),
-    Project(
-        id: '1',
-        type: ['Website'],
-        title: 'Menu Lereve',
-        githubLink: 'https://github.com/mahdijahandide',
-        websiteLink: 'https://menu.lerevekw.com',
-        description:
-            'Le Rêve Chocolatier ™️ is a luxury gourmet chocolate, fresh flowers, and custom cake boutique in Kuwait. We are committed to using 100% of pure Swiss, France, and Belgium, and producing natural hand-made unique tasting chocolates, combining different flavors together in our products.',
-        tools: ['Flutter', 'Laravel', 'SQL', 'PWA']),
-    Project(
-        id: '2',
         type: ['Application'],
         title: 'Lagoon Applications',
         githubLink: 'https://github.com/mahdijahandide',
@@ -108,17 +90,19 @@ mixin PersonalDetails {
         description:
             'The collection of wetland applications for the Fars Environmental Protection Organization has been designed for 7 regions with a special color theme.Among the capabilities of these applications, we can mention in-app routing to reach these regions, as well as a 360 virtual tour, access to plants andanimals.',
         tools: ['Flutter','Node js','React js','Mongo DB']),
+
     Project(
-        id: '3',
-        type: ['Application'],
-        title: 'Mazarat',
-        githubLink: 'https://github.com/mahdijahandide',
-        playstoreLink: 'play.google.com/store/apps/details?id=net.gulfweb.mazarat&hl=en',
+        id: '1',
+        type: ['Website'],
+        title: 'SUMS Map',
+        githubLink: '',
+        playstoreLink: '',
         description:
-            'Mazarat is home for hamlat where any customer can book islamic tours and packages and umrah. Mazarat have various services like flight booking , hotelbooking, visa and insurance as well. Mazarat now available on appStore and GooglePlay',
-        tools: ['Flutter', 'Laravel', 'SQL', 'Swift']),
+        'The suicide system of Shiraz medical sciences, which is programmed using Flutter and Laravel, has a map with dynamic layers and registration of suicide points, etc., the project link is not available due to the confidentiality of the project, but it can be displayed locally.',
+        tools: ['Flutter','Laravel','SQL']),
+
     Project(
-        id: '4',
+        id: '2',
         type: ['Application'],
         title: 'Cryptocurrency App',
         githubLink: 'https://github.com/mahdijahandide',
@@ -126,53 +110,38 @@ mixin PersonalDetails {
         description:
             'Digital currency buying and selling application with a very powerful user interface with many features including fingerprint and pin code login, color palette forpersonalizing the app, bank card registration, chat with support, professional reporting, wallet, authentication Users, the training of users within the program, etc.',
         tools: ['Kotlin', 'Python', 'SQL']),
+
     Project(
-        id: '5',
+        id: '3',
         type: ['Application'],
-        title: 'Ajrnii',
-        githubLink: 'https://github.com/mahdijahandide',
-        playstoreLink: 'play.google.com/store/apps/details?id=net.gulfclick.ajrnii&hl=en',
+        title: 'Babydo',
+        githubLink: '',
+        playstoreLink: 'https://play.google.com/store/apps/details?id=net.gulfclick.babydo&hl=en',
         description:
-            'Kuwait real estate service application with all the service facilities of this business, this application is also available in App Store and Google Play.',
-        tools: ['Java', 'Laravel','SQL','SQLite']),
+            'Babydo bus is the 1st but in Kuwait and in the middle east that is especialized in delivering the whole entertainment facility to your doorstep. Kids from all ages as young as 1 year can enjoy the games. There are also monitoring cameras inside the bus to ensure full safety and security that you can access within the app while you are at home.',
+        tools: ['Flutter', 'Laravel']),
+
     Project(
-        id: '6',
-        type: ['Application'],
-        title: 'Tarazan',
-        githubLink: 'https://github.com/mahdijahandide',
+        id: '4',
+        type: ['Application','Website'],
+        title: 'Pos system',
+        githubLink: '',
+        playstoreLink: 'https://pos.kash5astore.com/',
         description:
-            'A powerful application with a professional user interface powered by the Java language, the capabilities of this application include buying and keeping pets, as well as training and registering the store, etc. It should be noted that the application is multilingual.',
-        tools: ['Java', 'Laravel', 'SQL']),
-    Project(
-        id: '7',
-        type: ['Application'],
-        title: 'Ticnest',
-        githubLink: 'https://github.com/mahdijahandide',
-        description:
-        'The Ticnest application was ordered from Kuwait for the management of Kuwaiti schools and kindergartens, which has facilities such as defining the class list of students and parents, attendance system, etc., this application is based on Dart language and Flutter framework Tablet dimensions are written for Android and iOS versions.',
-        tools: ['Flutter', 'Laravel', 'SQL']),
-    Project(
-        id: '8',
-        type: ['Application'],
-        title: '7saby',
-        githubLink: 'https://github.com/mahdijahandide',
-        description:
-        'Creating 7saby application with Dart language and powerful Flutter framework, which features of this application can be used to manage the bank transaction app website like Zarin Pal for the country of Kuwait and it is multilingual and... Android and iOS version',
-        tools: ['Flutter', 'Laravel', 'SQL']),
+        'Responsive shop pos system for all platforms (web, Android, iOS) with the ability to report in different formats, customer information, percentage and direct discounts, register and report work shifts, daily automatic calculations, cost calculation Sending the product according to the size and address, and...',
+        tools: ['Flutter', 'Laravel']),
+
+
   ];
 
   static const List<String> skillsList = [
     'Java',
     'Kotlin',
-    'Dart',
     'Flutter',
-    'Swift',
-    'Golang',
-    'Spring Boot',
+    'Laravel',
     'Git',
     'Firebase',
     'OOP',
-    'C# WPF',
     'Linux Ubuntu',
     'Design Patterns',
     'Scrum',
@@ -180,9 +149,22 @@ mixin PersonalDetails {
 
   static const List<ExperienceTimeline> experienceList = [
     ExperienceTimeline(
+        title: 'Khedmat az ma',
+        position: 'Mobile App Developer',
+        timePeriod: 'Oct 2023 - Now',
+        description: [
+          'Changaal app',
+          'Khedmat az ma Provider app',
+        ],
+        tools: [
+          'Flutter',
+          'Firebase',
+          'Figma'
+        ]),
+    ExperienceTimeline(
         title: 'GulfWeb',
         position: 'Mobile App Developer',
-        timePeriod: 'Nov 2020 - Now',
+        timePeriod: 'Nov 2020 - Sep 2023',
         description: [
           'Created Pet shop Store Application',
           'Created School App for student and Teachers Applications',
@@ -263,7 +245,7 @@ mixin PersonalDetails {
 
   static const String userName = 'Mahdi Jahandide';
   static const String shortIntro =
-      'I’m Mahdi Jahandide and I’m a full stack developer, and I specialize in building efficient Flutter Applications that just work across all platforms and browsers. Innovative tech mind with 5 years of experience working as a Android, IOS and Web programmer. Capable of working with a variety of technology and software solutions, and managing databases. Valuable team member who has experience diagnosing problems and developing solutions.';
+      'I am Mehdi Jahandide, a developer who converting coffee into code.I was born in Shiraz, Iran and graduated from ITMC University with a Associate of Science in Computer Engineering.Innovative tech mind with 6 years of experience working as a Android, IOS and Web programmer. Capable of working with a variety of technology and software solutions, and managing databases. Valuable team member who has experience diagnosing problems and developing solutions.';
   static const String intro =
-      "I started my career into developement as android developer.First I built android applications in native android.Later I heared about flutter which helps in building cross platform applications.After gaining experience in flutter,I applied to internships,through which I was able to learn communication skills and code architectures.After that I worked as a freelancer and gained experience of how to build applications in production level.";
+      "Mehdi Jahandide, a visionary developer renowned for his ability to transmute the essence of coffee into elegant lines of code. Hailing from the historic city of Shiraz, Iran, Mehdi embarked on his journey in technology at ITMC University, where he earned an Associate of Science in Computer Engineering, laying the foundation for his illustrious career.With a steadfast commitment to innovation, Mehdi has amassed over six years of hands-on experience as a versatile programmer, specializing in Android, iOS, and web development. His dynamic skill set encompasses a diverse array of technologies and software solutions, coupled with a profound proficiency in database management.Mehdi's inherent knack for problem-solving and his aptitude for crafting bespoke solutions have rendered him an invaluable asset to every team he collaborates with. His track record is adorned with instances of diagnosing complex issues and engineering effective resolutions, making him a linchpin in any project he undertakes.";
 }

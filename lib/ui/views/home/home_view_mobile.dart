@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 import '../../../app/configs.dart';
 import '../../../app/icons.dart';
 import '../../../core/utils/ScreenUiHelper.dart';
@@ -59,46 +59,78 @@ class HomeMobileView extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            SizedBox(
-                height: 175.0,
-                child: CarouselSlider.builder(
-                  options: CarouselOptions(
-                      autoPlayCurve: Curves.easeOutQuart,
-                      autoPlay: true,
-                      viewportFraction: 1),
-                  itemCount: PersonalDetails.skillDisplayList.length,
-                  itemBuilder: (_, index, realIndex) {
-                    return Container(
-                      width: uiHelpers!.width,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15, vertical: 20),
-                      decoration: BoxDecoration(
-                          color: PersonalDetails.skillDisplayList[index].color,
-                          borderRadius: BorderRadius.circular(12)),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            PersonalDetails.skillDisplayList[index].iconData,
-                            color: Colors.white,
-                            size: 30,
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Text(
-                            PersonalDetails.skillDisplayList[index].title!,
-                            style: uiHelpers!.title!.copyWith(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontFamily: SystemProperties.fontName),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                )),
+            // SizedBox(
+            //     height: 175.0,
+            //     child: CarouselSlider.builder(
+            //       options: CarouselOptions(
+            //           autoPlayCurve: Curves.easeOutQuart,
+            //           autoPlay: true,
+            //           viewportFraction: 1),
+            //       itemCount: 1,
+            //       itemBuilder: (_, index, realIndex) {
+            //         return Container(
+            //           width: uiHelpers!.width,
+            //           padding: const EdgeInsets.symmetric(
+            //               horizontal: 15, vertical: 20),
+            //           decoration: BoxDecoration(
+            //               color: PersonalDetails.skillDisplayList[index].color,
+            //               borderRadius: BorderRadius.circular(12),
+            //           image: DecorationImage(image: AssetImage("assets/images/mehdi.jpg"),fit: BoxFit.cover)),
+            //           // child: Column(
+            //           //   crossAxisAlignment: CrossAxisAlignment.start,
+            //           //   mainAxisAlignment: MainAxisAlignment.center,
+            //           //   children: [
+            //           //     Icon(
+            //           //       PersonalDetails.skillDisplayList[index].iconData,
+            //           //       color: Colors.white,
+            //           //       size: 30,
+            //           //     ),
+            //           //     const SizedBox(
+            //           //       height: 20,
+            //           //     ),
+            //           //     Text(
+            //           //       PersonalDetails.skillDisplayList[index].title!,
+            //           //       style: uiHelpers!.title!.copyWith(
+            //           //           color: Colors.white,
+            //           //           fontSize: 18,
+            //           //           fontFamily: SystemProperties.fontName),
+            //           //     ),
+            //           //   ],
+            //           // ),
+            //         );
+            //       },
+            //     )),
+        Container(
+          width: uiHelpers!.width,
+          height: 200,
+          padding: const EdgeInsets.symmetric(
+              horizontal: 15, vertical: 20),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              image: DecorationImage(image: AssetImage("assets/images/mehdi.jpg"),fit: BoxFit.cover,
+                  alignment: Alignment(0, -0.5))),
+          // child: Column(
+          //   crossAxisAlignment: CrossAxisAlignment.start,
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: [
+          //     Icon(
+          //       PersonalDetails.skillDisplayList[index].iconData,
+          //       color: Colors.white,
+          //       size: 30,
+          //     ),
+          //     const SizedBox(
+          //       height: 20,
+          //     ),
+          //     Text(
+          //       PersonalDetails.skillDisplayList[index].title!,
+          //       style: uiHelpers!.title!.copyWith(
+          //           color: Colors.white,
+          //           fontSize: 18,
+          //           fontFamily: SystemProperties.fontName),
+          //     ),
+          //   ],
+          // ),
+        ),
             const SizedBox(
               height: 20,
             ),
@@ -124,15 +156,15 @@ class HomeMobileView extends StatelessWidget {
                 ),
               )
             ]),
-            const SizedBox(height: 20),
-            Expanded(
-              child: Align(
-                alignment: Alignment.bottomRight,
-                child: Image.asset(
-                  'assets/images/business.png',
-                ),
-              ),
-            ),
+            // const SizedBox(height: 20),
+            // Expanded(
+            //   child: Align(
+            //     alignment: Alignment.bottomRight,
+            //     child: Image.asset(
+            //       'assets/images/mehdi.jpg',
+            //     ),
+            //   ),
+            // ),
           ])),
     );
   }
