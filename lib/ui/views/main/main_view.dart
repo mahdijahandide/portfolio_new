@@ -79,9 +79,10 @@ class MainView extends HookWidget {
                         ? uiHelpers.primaryColor!
                         : Colors.white,
                     sidebarBoxShadow: [],
-                    maxWidth: 250,
+                    maxWidth: 390,
                     avatarImg: const AssetImage('assets/images/m.png'),
                     topPadding: 50,
+                    titleStyle: TextStyle(fontSize: 16),
                     body: model.child,
                     title: 'Mahdi Jahandide',
                     items: model.collapsibleItem),
